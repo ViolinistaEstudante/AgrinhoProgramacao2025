@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eventos que conectam o campo e a cidade">
+
+    <!-- Pré-conexão para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Logo Aba Chrome -->
+     <link rel="icon" href="../img/Logotipo-Imagem.png">
+
+    <!-- Folha de estilo -->
+    <link rel="stylesheet" href="style-geral.css">
+
+    <title>Festejando a Conexão Campo Cidade</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html" class="btn-cartilhas">Voltar a página principal</a>
+        </div>
+
+        <!-- Menu Hamburguer (Mobile) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger" aria-label="Menu principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Menu de Navegação -->
+        <nav class="nav-menu" aria-label="Navegação principal">
+            <ul>
+                <li><a href="https://www.instagram.com/o_r0drigu3s_" target="_blank">Sobre o Criador</a></li>
+                <li><a href="https://www.turismo.pr.gov.br/calendario-eventos/detalhes" target="_blank">Calendário de Eventos</a></li>
+                <li><a href="../referencias/referencias.html">Referências</a></li>
+            </ul>
+            <button class="btn-cartilhas1">
+                <a href="https://www.sistemafaep.org.br/agrinho/" target="_blank" class="cartilhas-link">
+                    <i class="fas fa-book-open icon"></i>
+                    <span class="btn-text">Cartilhas</span>
+                </a>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Seção de Destaques -->
+    <section class="eventos-section" id="destaques">
+        <div class="container">
+            <h2 class="section-title">Destaques <span class="city-name">Castro</span></h2>
+            
+            <!-- Evento 1 -->
+            <div class="evento-card">
+                <div class="evento-imagem">
+                    <img src="https://d14egya6em7vk9.cloudfront.net/agroleite/noticias/eicewl6dquzbz1nuhsjq.jpg" alt="Agroleite">
+                    <span class="evento-categoria">Agricultura</span>
+                </div>
+                <div class="evento-info">
+                    <h3>Agroleite</h3>
+                    <div class="evento-meta">
+                        <span class="evento-data">5 - 8 Agosto</span>
+                        <span class="evento-local">Castrolanda Expo Center / Parque de Exposições Dario Macedo</span>
+                    </div>
+                    <p class="evento-descricao">O Agroleite é um evento técnico promovido pela Cooperativa Castrolanda que acontece anualmente no mês de agosto na cidade de Castro- PR, a Capital Nacional do Leite. É reconhecido como a vitrine da tecnologia do leite da América Latina.<br><br>
+                    Sua programação apresenta ao visitante todo o potencial da produção de leite da região e a diversidade de produtos e soluções disponíveis no mercado para potencializar a rentabilidade da pecuária leiteira.</p>
+                    <a href="https://www.agroleitecastrolanda.com.br/pt-br/perfil" target="_blank" class="btn-detalhes">Ver detalhes</a>
+                </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="evento-card">
+                <div class="evento-imagem">
+                    <img src="https://blogdodoc.com/wp-content/uploads/2023/03/1679599165-4a-festa-do-peao-de-boiadeiro-de-castro-teve-publico-de-mais-de-75-mil-pessoas-img-4dbf791126a1e1d469f48864e2cafe68da9e7360-1-jpeg" alt="Festa do Peão de Boiadeiro">
+                    <span class="evento-categoria">Diversão - Agricultura</span>
+                </div>
+                <div class="evento-info">
+                    <h3>Festa do Peão de Boiadeiro</h3>
+                    <div class="evento-meta">
+                        <span class="evento-data">19 - 22 Março</span>
+                        <span class="evento-local">Parque de Exposições Dario Macedo</span>
+                    </div>
+                    <p class="evento-descricao">A Festa do Peão de Boiadeiro de Castro é uma celebração anual que ocorre em Castro, no Paraná, e é um evento que comemora o aniversário da cidade, geralmente próximo ao dia 19 de março. A festa é um rodeio com provas de montaria em touros, team roping e três tambores, além de shows de música sertaneja com artistas nacionais e locais, praça de alimentação e parque de diversões.</p>
+                    <a href="https://castro.atende.net/cidadao/noticia/6-festa-do-peao-de-boiadeiro-com-arena-coberta-rodeio-de-castro-vai-trazer-mais-conforto-para-publico-de-ate-80-mil-pessoas" target="_blank" class="btn-detalhes">Ver detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Vídeos -->
+    <section class="videos-section">
+        <div class="container">
+            <h2 class="section-title">Castro em Vídeo</h2>
+            <div class="videos-grid">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/1fGkqvNflVg" frameborder="0" allowfullscreen></iframe>
+                    <h3>Agroleite</h3>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Kmb4VF8sxgE" frameborder="0" allowfullscreen></iframe>
+                    <h3>Festa do Peão de Boiadeiro</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- Rodapé --->
+    <footer class="footer">
+        <div class="footer-simple">
+            <div class="footer-logo">
+                <img src="../img/Logo - AgrinhoCampo-Cidade.png" alt="Logo Festejando a Conexão Campo Cidade" width="150px"
+                    height="40px">
+            </div>
+            <div class="copyright">
+                <p>&copy;2025 | Festejando a Conexão Campo Cidade | Todos os direitos
+                    reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+</body>
+</html>

@@ -1,0 +1,501 @@
+/* ============= VARIÁVEIS CSS ============= */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --dark-color: #111;
+    --light-color: #f8f9fa;
+    --text-color: #333;
+    --text-light: #fff;
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+    --max-width: 1400px;
+}
+
+/* ============= RESET E BASE ============= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============= HEADER ============= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: var(--shadow-sm);
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Menu Hamburguer */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    z-index: 101;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    transition: var(--transition);
+}
+
+/* Estado ativo do menu hamburguer */
+.menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navegação */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a:focus::after {
+    width: 100%;
+}
+
+/* Botão */
+.btn-cartilhas {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Poppins";
+    text-transform: none;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.cartilhas-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 40px;
+    color: white !important;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 2;
+}
+
+.icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-text {
+    letter-spacing: 0.2px;
+}
+
+.btn-cartilhas:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+}
+
+.btn-cartilhas:hover .icon {
+    transform: translateX(5px);
+}
+
+.btn-cartilhas:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cartilhas::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    z-index: 1;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.btn-cartilhas:hover::before {
+    opacity: 1;
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+
+/* ============= HERO SECTION ============= */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('img/Background-Agrinho.png');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 0 5%;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 700px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ============= PORTFOLIO SECTION ============= */
+.portfolio-section {
+    padding: 4rem 5%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 0.5rem auto 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* City Cards */
+.city-card {
+    position: relative;
+    height: 300px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.city-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.city-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.city-card:hover .city-image {
+    filter: brightness(0.8) saturate(1.1);
+    transform: scale(1.05);
+}
+
+.city-info {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.city-card:hover .city-info {
+    transform: translateY(-10px);
+}
+
+.city-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.city-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* ============= FOOTER SIMPLIFICADO ============= */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.footer-simple {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo img {
+    height: auto;
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ============= BOTÃO VOLTAR AO TOPO ============= */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-md);
+    opacity: 1;
+    visibility: visible;
+    transition: var(--transition);
+    z-index: 99;
+}
+
+.back-to-top:hover {
+    background-color: #c0392b;
+    transform: translateY(-5px);
+}
+
+.back-to-top i {
+    transition: var(--transition);
+}
+
+.back-to-top:hover i {
+    transform: translateY(-3px);
+}
+
+/* ============= RESPONSIVIDADE ============= */
+@media (max-width: 992px) {
+    .nav-menu ul {
+        gap: 1rem;
+    }
+    
+    .btn-cartilhas {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.8rem 5%;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        clip-path: circle(0% at 100% 0);
+        transition: clip-path 0.6s ease;
+    }
+    
+    .menu-toggle:checked ~ .nav-menu {
+        clip-path: circle(150% at 50% 50%);
+    }
+    
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .hero {
+        height: 50vh;
+    }
+
+    .footer {
+        padding: 1.5rem 5%;
+    }
+    
+    .footer-logo img {
+        width: 120px;
+    }
+    
+    .copyright {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 0.7rem 5%;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .hero {
+        height: 40vh;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .city-card {
+        height: 250px;
+    }
+}
+
+/* ============= ANIMAÇÕES ============= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.portfolio-grid > * {
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.portfolio-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.portfolio-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.portfolio-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.portfolio-grid > *:nth-child(4) { animation-delay: 0.4s; }
