@@ -19,6 +19,11 @@ A responsividade é essencial para garantir o acesso democrático à informaçã
 
 </p>
 
+<h1 align="center">👨‍💻 Acesso ao site</h1>
+
+[Github](https://violinistaestudante.github.io/AgrinhoProgramacao2025/)
+[Vercel](https://agrinho-programacao2025-red.vercel.app/)
+
 
 
 
