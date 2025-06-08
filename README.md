@@ -32,11 +32,11 @@ A responsividade é essencial para garantir o acesso democrático à informaçã
 
 ---
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
-  <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VSCode">
-</p>
+<div align="center">
+  <img height="30" widht="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+  <img height="30" widht="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+  <img height="30" widht="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+</div>
 
 <p align="center">
   ✨ <strong>Festejando a Conexão Campo Cidade</strong> | &copy; Todos os direitos reservados para SEED e ao aluno <a href="https://www.instagram.com/br_rodriguex_/#">Brendow Rodrigues</a> - Copyright 2025 
